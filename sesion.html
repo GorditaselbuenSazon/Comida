@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inicio de Sesión</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: orange; /* Fondo naranja */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .login-form {
+      background-color: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      width: 300px;
+      text-align: center;
+    }
+    .login-form input {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    .login-form button {
+      width: 100%;
+      padding: 10px;
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .login-form button:hover {
+      background-color: #0056b3;
+    }
+    .login-form a {
+      display: block;
+      margin-top: 15px;
+      color: #007BFF;
+      text-decoration: none;
+    }
+    .login-form a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+<div class="login-form">
+  <h2>Inicio de Sesión</h2>
+  <form onsubmit="return validateLogin(event)">
+    <input type="text" id="username" placeholder="Usuario" required>
+    <input type="password" id="password" placeholder="Contraseña" required>
+    <button type="submit">Iniciar sesión</button>
+    </form><a href="file:///C:/Users/Asus/Documents/hola.html"></a>
+</div>
+
+<script>
+  const validUser = 'Berrios';
+  const validPassword = '1234';
+  
+  function validateLogin(event) {
+    event.preventDefault();
+    const username = document.getElementById('username').value;
+    const password = document.getElementById('password').value;
+
+    if (username === validUser && password === validPassword) {
+      window.location.href = 'file:///C:/Users/Asus/Documents/hola.html'; // Redirige a la página de productos
+    } else {
+      alert('Usuario o contraseña incorrectos');
+    }
+  }
+</script>
+
+</body>
+</html>
